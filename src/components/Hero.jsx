@@ -20,28 +20,28 @@ const Hero = () => {
 							target='_blank'
 							className='home__social-icon'
 						>
-							<UilGithubAlt />
+							<i class='uil uil-github-alt'></i>
 						</a>
 						<a
 							href='https://linkedin.com/in/afif-ahmed'
 							target='_blank'
 							className='home__social-icon'
 						>
-							<UilLinkedinAlt />
+							<i class='uil uil-linkedin-alt'></i>
 						</a>
 						<a
 							href='https://twitter.com/afif1400'
 							target='_blank'
 							className='home__social-icon'
 						>
-							<UilTwitterAlt />
+							<i class='uil uil-twitter-alt'></i>
 						</a>
 						<a
 							href='https://blog.afifahmed.me'
 							target='_blank'
 							className='home__social-icon'
 						>
-							<UilBracketsCurly />
+							<i class='uil uil-brackets-curly'></i>
 						</a>
 					</div>
 					<div className='home__img'>
@@ -66,7 +66,12 @@ const Hero = () => {
         129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
         -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z'
 								/>
-								<use xlinkHref='../assets/hero-profile.png' />
+								<image
+									x='12'
+									y='34'
+									className='home__blob-img'
+									xlinkHref='https://res.cloudinary.com/charcha/image/upload/v1622814014/hero-profile_f6stc9.png'
+								/>
 							</g>
 						</svg>
 					</div>
@@ -75,20 +80,19 @@ const Hero = () => {
 						<h3 className='home__subtitle'>Full Stack Developer</h3>
 						<p className='home__description'>
 							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta
-							quia explicabo pariatur! Vitae repudiandae omnis maxime neque
-							consectetur nesciunt? Totam.
+							quia explicabo pariatur!
 						</p>
 						<a href='#contact' className='button button--flex'>
 							Contact Me
-							<UilMessage className='button__icon' />
+							<i className='uil uil-message button__icon' />
 						</a>
 					</div>
 				</div>
 				<div className='home__scroll'>
-					<a href='#about' className='home__scroll-button button-flex'>
-						<UilMouseAlt2 className='home__scroll-mouse' />
+					<a href='#about' className='home__scroll-button button--flex'>
+						<i className='uil uil-mouse-alt-2 home__scroll-mouse'></i>
 						<span className='home__scroll-name'>Scroll down</span>
-						<UilArrowDown className='home__scroll-arrow' />
+						<i className='uil uil-arrow-down home__scroll-arrow' />
 					</a>
 				</div>
 			</div>
