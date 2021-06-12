@@ -29,6 +29,7 @@
     "netlify-cms-app": "^2.15.17",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "swiper": "^6.7.0"
   }
 }

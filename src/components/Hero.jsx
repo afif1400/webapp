@@ -1,13 +1,4 @@
 import React from "react";
-import {
-	UilLinkedinAlt,
-	UilGithubAlt,
-	UilTwitterAlt,
-	UilBracketsCurly,
-	UilMessage,
-	UilMouseAlt2,
-	UilArrowDown,
-} from "@iconscout/react-unicons";
 
 const Hero = () => {
 	return (

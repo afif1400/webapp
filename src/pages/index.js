@@ -1,3 +1,4 @@
+import '../styles/swiper.css'
 import "../styles/index.css"
 import * as React from "react"
 import Header from "../components/Header"
@@ -6,6 +7,8 @@ import About from "../components/About"
 import Skills from "../components/Skills"
 import Qualifications from "../components/Qualifications"
 import Services from "../components/Services"
+import Projects from "../components/Projects"
+import ProjectIdea from '../components/ProjectIdea'
 
 const IndexPage = () => {
   return (
@@ -17,6 +20,8 @@ const IndexPage = () => {
         <Skills />
         <Qualifications />
         <Services />
+        <Projects />
+        <ProjectIdea />
       </main>
     </div>
   )
