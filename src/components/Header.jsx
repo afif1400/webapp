@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
 	UilEstate,
 	UilUser,
@@ -12,13 +12,29 @@ import {
 
 const Header = () => {
 	const [open, setOpen] = useState(false);
+	const headerRef = useRef(null)
 
 	const handleToggle = () => {
 		setOpen(!open);
 	};
 
+	useEffect(() => {
+		if (window && headerRef) {
+			const scrollHeader = () => {
+				const nav = document.getElementById('header')
+				if (window.scrollY >= 80) {
+					nav.classList.add('scroll-header')
+				}
+				else {
+					nav.classList.remove('scroll-header')
+				}
+			}
+			window.addEventListener('scroll', scrollHeader)
+		}
+	})
+
 	return (
-		<header className='header' id='header'>
+		<header className='header' id='header' ref={headerRef}>
 			<nav className='nav container'>
 				<a href='#' className='nav__logo'>
 					Afif Ahmed
@@ -29,13 +45,13 @@ const Header = () => {
 				>
 					<ul className='nav__list grid'>
 						<li className='nav__item'>
-							<a href='#' className='nav__link' onClick={() => handleToggle()}>
+							<a href='#home' className='nav__link active-link' onClick={() => handleToggle()}>
 								<UilEstate className='nav__icon' /> Home
 							</a>
 						</li>
 						<li className='nav__item'>
 							<a
-								href='#About'
+								href='#about'
 								className='nav__link'
 								onClick={() => handleToggle()}
 							>

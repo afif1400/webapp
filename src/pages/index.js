@@ -13,25 +13,30 @@ import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 
 const IndexPage = () => {
-  const indexRef = React.useRef()
+  const indexRef = React.useRef(null)
 
 
-  // React.useEffect(() => {
-  //   if (indexRef.current) {
-  //     const sections = document.querySelectorAll('section[id]')
-  //     const scrollActive = () => {
-  //       const scrollY = window.pageXOffset;
+  React.useEffect(() => {
+    if (window && indexRef.current) {
+      const sections = document.querySelectorAll('section[id]')
+      const scrollActive = () => {
+        const scrollY = window.pageYOffset;
 
-  //       sections.forEach(current => {
-  //         const sectionHeight = current.offsetHeight
-  //         const sectionTop = current.offsetTop = 50
-  //         sectionId = current.getAttribute('id')
-  //       })
-  //     }
+        sections.forEach(current => {
+          const sectionHeight = current.offsetHeight
+          const sectionTop = current.offsetTop - 50
+          let sectionId = current.getAttribute('id')
 
-  //     window.addEventListener('scroll', scrollActive)
-  //   }
-  // })
+          if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
+          } else {
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
+          }
+        })
+      }
+      window.addEventListener('scroll', scrollActive)
+    }
+  })
 
   return (
     <div ref={indexRef}>
@@ -45,8 +50,11 @@ const IndexPage = () => {
         <Projects />
         <ProjectIdea />
         <Contact />
-        <Footer />
       </main>
+      <Footer />
+      <a href="#home" className="scrollup" id="scroll-up">
+        <i className="uil uil-arrow-up scrollup__icon"></i>
+      </a>
     </div>
   )
 }
