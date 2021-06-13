@@ -39,7 +39,7 @@ const Projects = () => {
 
   return (
     <div>
-      <section className="portfolio section" id="porfolio">
+      <section className="portfolio section" id="portfolio">
         <h2 className="section__title">Projects</h2>
         <span className="section__subtitle">My recent works</span>
         <div className="portfolio__container container">
