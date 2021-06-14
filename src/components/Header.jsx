@@ -12,14 +12,47 @@ import {
 
 const Header = () => {
 	const [open, setOpen] = useState(false);
+	const [themeButton, setThemeButton] = useState('uil-moon')
 	const headerRef = useRef(null)
 
 	const handleToggle = () => {
 		setOpen(!open);
 	};
 
+	const getCurrentTheme = () => document.body.classList.contains('dark-theme') ? 'dark' : 'light'
+	const getCurrentIcon = () => themeButton === 'uil-sun' ? 'uil-moon' : 'uil-sun'
+
+	const handleThemeChange = () => {
+
+		document.body.classList.toggle('dark-theme')
+		if (themeButton === 'uil-moon') {
+			setThemeButton('uil-sun')
+		}
+		else {
+			setThemeButton('uil-moon')
+		}
+
+
+		localStorage.setItem('selected-theme', getCurrentTheme())
+		localStorage.setItem('selected-icon', getCurrentIcon())
+
+	}
+
 	useEffect(() => {
 		if (window && headerRef) {
+			const selectedTheme = localStorage.getItem('selected-theme')
+			const selectedIcon = localStorage.getItem('selctetd-icon')
+
+			if (selectedTheme) {
+				document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove']('dark-theme')
+				if (themeButton === 'uil-moon') {
+					setThemeButton('uil-sun')
+				}
+				else {
+					setThemeButton('uil-moon')
+				}
+			}
+
 			const scrollHeader = () => {
 				const nav = document.getElementById('header')
 				if (window.scrollY >= 80) {
@@ -31,7 +64,7 @@ const Header = () => {
 			}
 			window.addEventListener('scroll', scrollHeader)
 		}
-	})
+	}, [])
 
 	return (
 		<header className='header' id='header' ref={headerRef}>
@@ -98,12 +131,13 @@ const Header = () => {
 					<UilMultiply className='nav__close' onClick={() => handleToggle()} />
 				</div>
 				<div className='nav__btns'>
+					<i className={`uil ` + themeButton + ` change-theme`} id="theme-button" onClick={() => handleThemeChange()}></i>
 					<div
 						className='nav__toggle'
 						onClick={() => handleToggle()}
 						id='nav-toggle'
 					>
-						<UilApps />
+						<i className="uil uil-apps"></i>
 					</div>
 				</div>
 			</nav>

@@ -43,7 +43,6 @@ const Projects = () => {
         <h2 className="section__title">Projects</h2>
         <span className="section__subtitle">My recent works</span>
         <div className="portfolio__container container">
-
           <Swiper cssMode={true} navigation={true} pagination={{ clickable: true }} mousewheel={true} keyboard={true} className="mySwiper">
             {projects.map((project) => {
               return <SwiperSlide>

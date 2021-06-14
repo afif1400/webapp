@@ -16,7 +16,7 @@ const Contact = () => {
               </div>
             </div>
             <div className="contact__information">
-              <i className="uil uil-envolope contact__icon"></i>
+              <i className="uil uil-envelope contact__icon"></i>
               <div>
                 <h3 className="contact__title">Email Me</h3>
                 <span className="contact__subtitle">afifahmed456@gmail.com</span>
