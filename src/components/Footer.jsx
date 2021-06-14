@@ -12,7 +12,7 @@ const Footer = () => {
           <ul className="footer__links">
             <li><a href="#services" className="footer__link">Services</a></li>
             <li><a href="#portfolio" className="footer__link">Portfolio</a></li>
-            <li><a href="#contact" className="footer__link">Contact me</a></li>
+            <li><a href="#contact" className="footer__link">Contactme</a></li>
           </ul>
           <div className="footer__social">
             <a href="" target="_blank" className="footer__social">

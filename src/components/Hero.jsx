@@ -70,8 +70,7 @@ const Hero = () => {
 						<h1 className='home__title'>Hi, I'am Afif</h1>
 						<h3 className='home__subtitle'>Full Stack Developer</h3>
 						<p className='home__description'>
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta
-							quia explicabo pariatur!
+							I build great web experiences which are visually apealing using react and robust backend services.
 						</p>
 						<a href='#contact' className='button button--flex'>
 							Contact Me

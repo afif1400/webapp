@@ -11,15 +11,15 @@ const Qualifications = () => {
 			<div className='qualification__container container'>
 				<div className='qualification__tabs'>
 					<div className='qualification__button button--flex' onClick={() => {
-						setEducation(!education)
-						setWork(!work)
+						setEducation(true)
+						setWork(false)
 					}}>
 						<i class='uil uil-graduation-cap qualification__icon'></i>
 						Education
 					</div>
 					<div className='qualification__button button--flex' onClick={() => {
-						setWork(!work)
-						setEducation(!education)
+						setWork(true)
+						setEducation(false)
 					}}>
 						<i class="uil uil-briefcase-alt qualification__icon"></i>
 						Work
