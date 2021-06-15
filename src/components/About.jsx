@@ -36,7 +36,7 @@ const About = () => {
 						</div>
 					</div>
 					<div className='about__buttons'>
-						<a download='' href='#' className='button button--flex'>
+						<a download='resume.pdf' href='#' className='button button--flex'>
 							Docwnload CV
 							<i className='uil uil-import button__icon'></i>
 						</a>
